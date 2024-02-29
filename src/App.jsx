@@ -99,7 +99,6 @@ function App() {
 				{movies.length > 0 &&
 					movies.map((movie, index) => (
 						<div className="movie" key={index} data-id={index}>
-							<span>{movie.rating}</span>
 							<div className="image">
 								<div
 									class="delete"
@@ -109,11 +108,12 @@ function App() {
 								>
 									x
 								</div>
+								<span class="rating">{movie.rating}</span>
 								<img src={movie.image} alt="" />
 							</div>
 							<h2>{movie.title}</h2>
-							<p>{movie.genre}</p>
-							<p>{movie.description}</p>
+							<p class="genre">{movie.genre}</p>
+							<p class="description">{movie.description}</p>
 						</div>
 					))}
 			</div>
